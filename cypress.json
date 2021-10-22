@@ -1,0 +1,31 @@
+{
+  "viewportWidth": 1240,
+  "viewportHeight": 960,
+  "//viewportWidth": 414,
+  "//viewportHeight": 736,
+  "projectId": "gems8g",
+  "chromeWebSecurity": false,
+  
+
+  "env": {
+    "TestLogin":"test@admin.com",
+    "DevLogin":"dev@admin.com",
+    "DevSHLogin":"devsh@admin.com",
+    "ProdLogin":"prod@admin.com",
+    "ProdAdminLogin":"vtest@test.com",
+    "ProdAdminPassword":"123456",
+    "Password":"456789",
+  
+    "TestSpecialistLogin":"0502333355",
+    "TestSpecialistPassword":"Specialist.Pro-01.21",
+    "DevSpecialistLogin":"0400000010",
+    "DevSpecialistPassword":"123456",
+  
+    "baseUrlTest":"https://test-my.carbook.pro",
+    "baseUrlDev":"https://dev-my.carbook.pro",
+    "baseUrlProd":"https://my.carbook.pro",
+    "baseApiUrl":"https://test-api.carbook.pro"
+
+    
+  }
+}
