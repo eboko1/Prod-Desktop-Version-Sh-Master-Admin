@@ -24,7 +24,7 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
   beforeEach('User LogIn ', () => {
     cy.visit(baseUrl)
     cy.get('#login.ant-input').type(Cypress.env('ProdAdminLogin'));  
-    cy.get('#password').type(Cypress.env('ProdAdminPassword'));         
+    cy.get('#password').type(Cypress.env('Password'));         
     cy.get('button').click()
     cy.intercept('GET', baseUrl+'/dashboard')
     
@@ -35,9 +35,6 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
         cy.get('.styles-m__title---Nwr2X').contains('Календар Завантаження');
         cy.get('.styles-m__userName---h3mg1').click()
         .then (()=>{
-        cy.get('#businessTypes > .ant-select-selection').click()
-        cy.contains('Шиномонтаж').click();
-        cy.wait(2000)
         cy.get('#language').click()
         cy.contains('Українська').click();
         cy.wait(1000)
@@ -48,7 +45,7 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
     })
 
     it('+Клієнта та а/м: '+idClient, function(){
-        cy.get('.styles-m__logo---1OVEG').click()
+        cy.get('.styles-m__logo---2zDPJ').click()
         cy.wait(1000)
         cy.contains('Ремонти').click({force: true})
         .then(()=>{
@@ -157,7 +154,7 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
     });
 
   it('Редагування мобільного номера для клієнта:'+idClient, function(){
-    cy.get('.styles-m__logo---1OVEG').click()
+    cy.get('.styles-m__logo---2zDPJ').click()
     cy.get(':nth-child(2) > .ant-menu-submenu-title').click()
     cy.contains('Клієнти').click()
       .then(()=>{
@@ -187,7 +184,7 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
     })
 
     it('Додати Н/З, підтягування клієнта через пошук, клієнт: '+idClient, function(){
-        cy.get('.styles-m__logo---1OVEG').click()//menu
+        cy.get('.styles-m__logo---2zDPJ').click()//menu
         cy.contains('Ремонти').click()
           .then(()=>{
               cy.log('Вибір Меню ремонти');
@@ -249,7 +246,7 @@ describe ('Prod|DesktopSH|UA|Sadmin', function(){
 
 
   it('Перевід у статус Запис', function(){
-      cy.get('.styles-m__logo---1OVEG').click()//menu
+      cy.get('.styles-m__logo---2zDPJ').click()//menu
       cy.log('Вибір Меню ремонти'+ cy.url());
       cy.contains('Ремонти').first().click({ force: true })
         .then(()=>{
@@ -505,7 +502,7 @@ it('Відкриття кaсового Ордера з НЗ', function(){
     });
 
   it('Перевірка відкриття модалки створення Працівника', function(){
-    cy.get('.styles-m__logo---1OVEG').click()//menu
+    cy.get('.styles-m__logo---2zDPJ').click()//menu
     cy.get(':nth-child(2) > .ant-menu-submenu-title').click().should('exist');
     cy.contains('Працівники').click()
         .then(()=>{
@@ -517,7 +514,7 @@ it('Відкриття кaсового Ордера з НЗ', function(){
   });
 
   it('Перевірка відкриття картки існуючого Працівника', function(){
-    cy.get('.styles-m__logo---1OVEG').click()//menu
+    cy.get('.styles-m__logo---2zDPJ').click()//menu
     cy.get(':nth-child(2) > .ant-menu-submenu-title').click().should('exist');
     cy.contains('Працівники').click()
         .then(()=>{

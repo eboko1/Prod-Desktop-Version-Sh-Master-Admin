@@ -12,8 +12,7 @@
     "DevLogin":"dev@admin.com",
     "DevSHLogin":"devsh@admin.com",
     "ProdLogin":"prod@admin.com",
-    "ProdAdminLogin":"vtest@test.com",
-    "ProdAdminPassword":"123456",
+    "ProdAdminLogin":"prodsh@admin.com",
     "Password":"456789",
   
     "TestSpecialistLogin":"0502333355",
